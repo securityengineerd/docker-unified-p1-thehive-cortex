@@ -1,0 +1,87 @@
+# -----------------------------
+# DOCKER / COMPOSE
+# -----------------------------
+# Local volumes, caches, metadata
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+docker-data/
+tmp/
+*.pid
+
+# Docker build artifacts
+*.tar
+*.img
+
+# -----------------------------
+# ENVIRONMENT / SECRETS
+# -----------------------------
+.env
+.env.*
+!env.example
+secret.conf
+secret.conf.*
+*.key
+*.pem
+*.crt
+
+# TheHive-specific secrets
+/etc/thehive/secret.conf
+/etc/thehive/secret.conf.template
+thehive/secret.conf
+thehive/*secret*
+
+# -----------------------------
+# TLS / SSL Certificates
+# -----------------------------
+nginx/certs/*
+!nginx/certs/.gitkeep
+
+# -----------------------------
+# LOG FILES
+# -----------------------------
+*.log
+logs/
+nginx/log/*
+thehive/log/*
+cortex/log/*
+/var/log/thehive/*
+/var/log/cortex/*
+
+# -----------------------------
+# APPLICATION CONFIG TEMPLATES
+# -----------------------------
+index.conf
+index.conf.template
+application.conf.local
+
+# -----------------------------
+# BACKUPS
+# -----------------------------
+*.bak
+*.old
+*.backup
+
+# -----------------------------
+# IDE / EDITOR / OS FILES
+# -----------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
